@@ -26,7 +26,14 @@ SECRET_KEY = 'django-insecure-%nhw@41lcy%&@!1ab&ddnz9!$c3&54*o@juc8!tv_rz%*bt&_#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+
+# hosts liberados no deploy
+ALLOWED_HOSTS = [
+    'azure.didox.com.br',
+    'aws.didox.com.br',
+    'localhost'
+]
 
 
 # Application definition
