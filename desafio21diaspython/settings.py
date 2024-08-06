@@ -83,16 +83,16 @@ WSGI_APPLICATION = 'desafio21diaspython.wsgi.application'
 # }
 
 ###### Utilizando MYSQL 
-DATABASES = {  
-    'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': os.getenv("DATABASE"),  
-        'USER': os.getenv("USER"),  
-        'PASSWORD': os.getenv("PASSWORD"),  
-        'HOST': os.getenv("HOST"),  
-        'PORT': '3306'
-    }  
-}  
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv("DATABASE", "desafio21dias_python_django"),
+        'USER': os.getenv("USER", "root"),
+        'PASSWORD': os.getenv("PASSWORD", "root"),
+        'HOST': os.getenv("HOST", "localhost"),
+        'PORT': os.getenv("PORT", "3306")
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
